@@ -37,12 +37,6 @@ class FiguresController < ApplicationController
   end
 
   patch '/figures/:id' do
-    # if !params[:figures].keys.include?("title_ids")
-    #   params[:owner]["title_ids"] = []
-    # end
-    # if !params[:figures].keys.include?("landmark_ids")
-    #   params[:owner]["landmark_ids"] = []
-    # end
 
     @figure = Figure.find(params[:id])
     @figure.update(params[:figure])
